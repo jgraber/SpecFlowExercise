@@ -1,7 +1,7 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Firefox;
 using TechTalk.SpecFlow;
+using NUnit.Framework;
 
 namespace SmallStore.Tests
 {
