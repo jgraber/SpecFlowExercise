@@ -15,8 +15,9 @@ namespace SmallStore.Tests
         }
 
         [When(@"I navigate to the store")]
-        public void WhenINavigateToTheStore()
+        public void ForInformationOnly()
         {
+            // Placeholder to make the scenario readable, but will do nothing
         }
 
         [Then(@"I find those (.*) items on the start page")]
