@@ -1,4 +1,5 @@
 ﻿using System;
+using NUnit.Framework;
 using TechTalk.SpecFlow;
 
 namespace SmallStore.German.Tests
@@ -6,22 +7,39 @@ namespace SmallStore.German.Tests
     [Binding]
     public class RundenSteps
     {
+        private Eintrag _eintrag;
+
         [Given(@"der Eintrag enthält (.*) Credit")]
-        public void AngenommenDerEintragEnthaltCredit(int p0)
+        public void AngenommenDerEintragEnthaltCredit(string credit)
         {
-            ScenarioContext.Current.Pending();
+            _eintrag = new Eintrag(Double.Parse(credit));
         }
         
         [When(@"das Protokoll angeschaut wird")]
-        public void WennDasProtokollAngeschautWird()
+        public void ForInformationOnly()
         {
-            ScenarioContext.Current.Pending();
+            // Placeholder to make the scenario readable, but will do nothing
         }
-        
+
         [Then(@"wird dem Benutzer (.*) Credit angezeigt")]
-        public void DannWirdDemBenutzerCreditAngezeigt(int p0)
+        public void DannWirdDemBenutzerCreditAngezeigt(string gerundeterCredit)
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual(gerundeterCredit, _eintrag.GetValue().ToString());
+        }
+    }
+
+    public class Eintrag
+    {
+        private double value;
+
+        public Eintrag(double value)
+        {
+            this.value = value;
+        }
+
+        public double GetValue()
+        {
+            return value;
         }
     }
 }
