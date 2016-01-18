@@ -4,19 +4,20 @@ Funktionalität: Korrektes Runden
 	Damit jeder erhält was er verdient, muss korrekt auf 
 	den nächsten 0.5er Schritt gerundet werden.
 
-@mytag
-Szenario: Ganze Zahlen werden nicht gerundet
-	Angenommen der Eintrag enthält 1 Credit
-	Wenn das Protokoll angeschaut wird
-	Dann wird dem Benutzer 1 Credit angezeigt
+Szenariogrundriss: Werte werden korrekt gerundet
+	Wenn der Eintrag <Credits> hat
+	Dann wird <GerundeteCredits> angezeigt
 
-Szenario: Nachkommastellen werden korrekt aufgerundet
-	Angenommen der Eintrag enthält 1.25 Credit
-	Wenn das Protokoll angeschaut wird
-	Dann wird dem Benutzer 1.5 Credit angezeigt
-
-Szenario: Nachkommastellen werden korrekt abgerundet
-	Angenommen der Eintrag enthält 1.65 Credit
-	Wenn das Protokoll angeschaut wird
-	Dann wird dem Benutzer 1.5 Credit angezeigt
-
+	Beispiele: 
+	| Credits | GerundeteCredits |
+	| 1.1     | 1                |
+	| 1.2     | 1                |
+	| 1.24    | 1                |
+	| 1.25    | 1.5              |
+	| 1.26    | 1.5              |
+	| 1.5     | 1.5              |
+	| 1.51    | 1.5              |
+	| 1.6     | 1.5              |
+	| 1.74    | 1.5              |
+	| 1.75    | 2                |
+	| 2.0     | 2                |

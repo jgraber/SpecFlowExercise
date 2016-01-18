@@ -66,54 +66,27 @@ namespace SmallStore.German.Tests
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Ganze Zahlen werden nicht gerundet")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void GanzeZahlenWerdenNichtGerundet()
+        [NUnit.Framework.DescriptionAttribute("Werte werden korrekt gerundet")]
+        [NUnit.Framework.TestCaseAttribute("1.1", "1", null)]
+        [NUnit.Framework.TestCaseAttribute("1.2", "1", null)]
+        [NUnit.Framework.TestCaseAttribute("1.24", "1", null)]
+        [NUnit.Framework.TestCaseAttribute("1.25", "1.5", null)]
+        [NUnit.Framework.TestCaseAttribute("1.26", "1.5", null)]
+        [NUnit.Framework.TestCaseAttribute("1.5", "1.5", null)]
+        [NUnit.Framework.TestCaseAttribute("1.51", "1.5", null)]
+        [NUnit.Framework.TestCaseAttribute("1.6", "1.5", null)]
+        [NUnit.Framework.TestCaseAttribute("1.74", "1.5", null)]
+        [NUnit.Framework.TestCaseAttribute("1.75", "2", null)]
+        [NUnit.Framework.TestCaseAttribute("2.0", "2", null)]
+        public virtual void WerteWerdenKorrektGerundet(string credits, string gerundeteCredits, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ganze Zahlen werden nicht gerundet", new string[] {
-                        "mytag"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Werte werden korrekt gerundet", exampleTags);
+#line 7
+this.ScenarioSetup(scenarioInfo);
 #line 8
-this.ScenarioSetup(scenarioInfo);
+ testRunner.When(string.Format("der Eintrag {0} hat", credits), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Wenn ");
 #line 9
- testRunner.Given("der Eintrag enthält 1 Credit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Angenommen ");
-#line 10
- testRunner.When("das Protokoll angeschaut wird", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Wenn ");
-#line 11
- testRunner.Then("wird dem Benutzer 1 Credit angezeigt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dann ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Nachkommastellen werden korrekt aufgerundet")]
-        public virtual void NachkommastellenWerdenKorrektAufgerundet()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Nachkommastellen werden korrekt aufgerundet", ((string[])(null)));
-#line 13
-this.ScenarioSetup(scenarioInfo);
-#line 14
- testRunner.Given("der Eintrag enthält 1.25 Credit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Angenommen ");
-#line 15
- testRunner.When("das Protokoll angeschaut wird", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Wenn ");
-#line 16
- testRunner.Then("wird dem Benutzer 1.5 Credit angezeigt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dann ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Nachkommastellen werden korrekt abgerundet")]
-        public virtual void NachkommastellenWerdenKorrektAbgerundet()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Nachkommastellen werden korrekt abgerundet", ((string[])(null)));
-#line 18
-this.ScenarioSetup(scenarioInfo);
-#line 19
- testRunner.Given("der Eintrag enthält 1.65 Credit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Angenommen ");
-#line 20
- testRunner.When("das Protokoll angeschaut wird", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Wenn ");
-#line 21
- testRunner.Then("wird dem Benutzer 1.5 Credit angezeigt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dann ");
+ testRunner.Then(string.Format("wird {0} angezeigt", gerundeteCredits), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dann ");
 #line hidden
             this.ScenarioCleanup();
         }
