@@ -14,3 +14,9 @@ Szenario: Nachkommastellen werden korrekt aufgerundet
 	Angenommen der Eintrag enthält 1.25 Credit
 	Wenn das Protokoll angeschaut wird
 	Dann wird dem Benutzer 1.5 Credit angezeigt
+
+Szenario: Nachkommastellen werden korrekt abgerundet
+	Angenommen der Eintrag enthält 1.65 Credit
+	Wenn das Protokoll angeschaut wird
+	Dann wird dem Benutzer 1.5 Credit angezeigt
+

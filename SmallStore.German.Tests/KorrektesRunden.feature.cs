@@ -100,6 +100,23 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Nachkommastellen werden korrekt abgerundet")]
+        public virtual void NachkommastellenWerdenKorrektAbgerundet()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Nachkommastellen werden korrekt abgerundet", ((string[])(null)));
+#line 18
+this.ScenarioSetup(scenarioInfo);
+#line 19
+ testRunner.Given("der Eintrag enthält 1.65 Credit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Angenommen ");
+#line 20
+ testRunner.When("das Protokoll angeschaut wird", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Wenn ");
+#line 21
+ testRunner.Then("wird dem Benutzer 1.5 Credit angezeigt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dann ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

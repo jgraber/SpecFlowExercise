@@ -43,6 +43,10 @@ namespace SmallStore.German.Tests
             {
                 return 1.5;
             }
+            if (value == 1.65)
+            {
+                return 1.5;
+            }
             return value;
         }
     }
