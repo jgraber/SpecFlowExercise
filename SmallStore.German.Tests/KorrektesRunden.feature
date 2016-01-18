@@ -1,4 +1,4 @@
-﻿# language: de-DE
+﻿# language: de-CH
 # encoding: utf-8
 Funktionalität: Korrektes Runden
 	Damit jeder erhält was er verdient, muss korrekt auf 
@@ -9,3 +9,8 @@ Szenario: Gerade Nummer wird nicht gerundet
 	Angenommen der Eintrag enthält 1 Credit
 	Wenn das Protokoll angeschaut wird
 	Dann wird dem Benutzer 1 Credit angezeigt
+
+Szenario: Nachkommastellen werden korrekt gerundet
+	Angenommen der Eintrag enthält 1.25 Credit
+	Wenn das Protokoll angeschaut wird
+	Dann wird dem Benutzer 1.5 Credit angezeigt

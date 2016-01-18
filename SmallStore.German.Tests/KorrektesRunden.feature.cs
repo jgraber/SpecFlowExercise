@@ -32,7 +32,7 @@ namespace SmallStore.German.Tests
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("de-DE"), "Korrektes Runden", "Damit jeder erhält was er verdient, muss korrekt auf \r\nden nächsten 0.5er Schritt" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("de-CH"), "Korrektes Runden", "Damit jeder erhält was er verdient, muss korrekt auf \r\nden nächsten 0.5er Schritt" +
                     " gerundet werden.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -80,6 +80,23 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.When("das Protokoll angeschaut wird", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Wenn ");
 #line 11
  testRunner.Then("wird dem Benutzer 1 Credit angezeigt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dann ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Nachkommastellen werden korrekt gerundet")]
+        public virtual void NachkommastellenWerdenKorrektGerundet()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Nachkommastellen werden korrekt gerundet", ((string[])(null)));
+#line 13
+this.ScenarioSetup(scenarioInfo);
+#line 14
+ testRunner.Given("der Eintrag enthält 1.25 Credit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Angenommen ");
+#line 15
+ testRunner.When("das Protokoll angeschaut wird", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Wenn ");
+#line 16
+ testRunner.Then("wird dem Benutzer 1.5 Credit angezeigt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dann ");
 #line hidden
             this.ScenarioCleanup();
         }
