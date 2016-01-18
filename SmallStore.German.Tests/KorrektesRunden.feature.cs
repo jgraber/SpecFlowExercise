@@ -66,11 +66,11 @@ namespace SmallStore.German.Tests
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Gerade Nummer wird nicht gerundet")]
+        [NUnit.Framework.DescriptionAttribute("Ganze Zahlen werden nicht gerundet")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void GeradeNummerWirdNichtGerundet()
+        public virtual void GanzeZahlenWerdenNichtGerundet()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gerade Nummer wird nicht gerundet", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ganze Zahlen werden nicht gerundet", new string[] {
                         "mytag"});
 #line 8
 this.ScenarioSetup(scenarioInfo);
@@ -85,10 +85,10 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Nachkommastellen werden korrekt gerundet")]
-        public virtual void NachkommastellenWerdenKorrektGerundet()
+        [NUnit.Framework.DescriptionAttribute("Nachkommastellen werden korrekt aufgerundet")]
+        public virtual void NachkommastellenWerdenKorrektAufgerundet()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Nachkommastellen werden korrekt gerundet", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Nachkommastellen werden korrekt aufgerundet", ((string[])(null)));
 #line 13
 this.ScenarioSetup(scenarioInfo);
 #line 14
