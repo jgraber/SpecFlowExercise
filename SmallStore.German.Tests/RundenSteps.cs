@@ -39,14 +39,11 @@ namespace SmallStore.German.Tests
 
         public double GetValue()
         {
-            if (value == 1.25)
+            if (value == 1.25 || value == 1.65)
             {
                 return 1.5;
             }
-            if (value == 1.65)
-            {
-                return 1.5;
-            }
+
             return value;
         }
     }
