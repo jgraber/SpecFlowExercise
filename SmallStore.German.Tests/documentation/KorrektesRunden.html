@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Korrektes Runden</title>
+    <link rel="stylesheet" href="css/master.css" type="text/css" />
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+  initializeToc();
+});
+</script>
+    <!-- We are using Font Awesome - http://fortawesome.github.com/Font-Awesome - licensed under CC BY 3.0 -->
+  </head>
+  <body>
+    <div id="container">
+      <div id="top" />
+      <div id="toc">
+        <p class="tocCollapser" title="Collapse Table of Content">«</p>
+        <ul class="features">
+          <li class="file" id="root">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="file">
+            <span class="current">Korrektes Runden</span>
+          </li>
+          <li>
+            <div class="directory">
+              <a href="documentation/index.html">documentation</a>
+            </div>
+            <ul class="features">
+              <li>
+                <div class="directory">
+                  <a href="documentation/img/index.html">img</a>
+                </div>
+                <ul class="features" />
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="feature">
+        <h1>Korrektes Runden</h1>
+        <div class="description">
+          <p>Damit jeder erhält was er verdient, muss korrekt auf 
+den nächsten 0.5er Schritt gerundet werden.</p>
+        </div>
+        <ul id="scenarios">
+          <li class="scenario">
+            <div class="scenario-heading">
+              <h2>Werte werden korrekt gerundet</h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Wenn </span>der Eintrag &lt;Credits&gt; hat</li>
+                <li class="step">
+                  <span class="keyword">Dann </span>wird &lt;GerundeteCredits&gt; angezeigt</li>
+              </ul>
+            </div>
+            <div>
+              <div class="examples">
+                <h3>Examples: </h3>
+                <div class="table_container">
+                  <table class="datatable">
+                    <thead>
+                      <tr>
+                        <th>Credits</th>
+                        <th>GerundeteCredits</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1.1</td>
+                        <td>1</td>
+                      </tr>
+                      <tr>
+                        <td>1.2</td>
+                        <td>1</td>
+                      </tr>
+                      <tr>
+                        <td>1.24</td>
+                        <td>1</td>
+                      </tr>
+                      <tr>
+                        <td>1.25</td>
+                        <td>1.5</td>
+                      </tr>
+                      <tr>
+                        <td>1.26</td>
+                        <td>1.5</td>
+                      </tr>
+                      <tr>
+                        <td>1.5</td>
+                        <td>1.5</td>
+                      </tr>
+                      <tr>
+                        <td>1.51</td>
+                        <td>1.5</td>
+                      </tr>
+                      <tr>
+                        <td>1.6</td>
+                        <td>1.5</td>
+                      </tr>
+                      <tr>
+                        <td>1.74</td>
+                        <td>1.5</td>
+                      </tr>
+                      <tr>
+                        <td>1.75</td>
+                        <td>2</td>
+                      </tr>
+                      <tr>
+                        <td>2.0</td>
+                        <td>2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="footer">
+        <p>Generated on: 19 Januar 2016 22:44:53</p>
+        <p>Produced by Pickles, version 1.2.3.0</p>
+      </div>
+    </div>
+  </body>
+</html>
